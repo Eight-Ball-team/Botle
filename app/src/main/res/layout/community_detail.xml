@@ -43,6 +43,30 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.4514" />
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_angrytext_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5486" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_angrytext_end"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6347" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_suprizetext_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7153" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_suprizetext_end"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8014" />
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/g_happy_start"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -66,6 +90,31 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.4583" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_suprize_end"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8083" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_suprize_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7083" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_angry_end"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6417" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_angry_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5417" />
+
 
     <ImageButton
         android:id="@+id/arrow_left"
@@ -179,7 +228,7 @@
         android:gravity="center"
         android:text="10"/>
     <ImageButton
-        android:id="@+id/sad_emotion"
+        android:id="@+id/sad_emotion_1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="?android:selectableItemBackground"
@@ -187,30 +236,105 @@
         app:layout_constraintStart_toStartOf="@id/g_sad_start"
         app:layout_constraintEnd_toEndOf="@id/g_sad_end"
         app:layout_constraintTop_toBottomOf="@id/emotion_share"
+        app:layout_constraintVertical_bias="0.1"
         android:layout_marginTop="16dp"/>
+
     <TextView
-        android:id="@+id/sad_text"
+        android:id="@+id/sad_text_1"
         style="@style/Small"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/happy_emotion"
+        app:layout_constraintTop_toBottomOf="@id/sad_emotion_1"
         app:layout_constraintStart_toStartOf="@id/g_sadtext_start"
         app:layout_constraintEnd_toEndOf="@id/g_sadtext_end"
         android:layout_marginTop="4dp"
         android:gravity="center"
         android:text="슬퍼요"/>
+
     <TextView
-        android:id="@+id/sad_number"
+        android:id="@+id/sad_number_1"
         style="@style/Small"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/happy_text"
+        app:layout_constraintTop_toBottomOf="@id/sad_text_1"
         app:layout_constraintStart_toStartOf="@id/g_sadtext_start"
         app:layout_constraintEnd_toEndOf="@id/g_sadtext_end"
         android:layout_marginTop="4dp"
         android:gravity="center"
         android:text="2"/>
-    
+
+    <ImageButton
+        android:id="@+id/angry_emotion_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:src="@drawable/angry"
+        app:layout_constraintStart_toStartOf="@id/g_angry_start"
+        app:layout_constraintEnd_toEndOf="@id/g_angry_end"
+        app:layout_constraintTop_toBottomOf="@id/emotion_share"
+        app:layout_constraintVertical_bias="0.1"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/angry_text_1"
+        style="@style/Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/angry_emotion_1"
+        app:layout_constraintStart_toStartOf="@id/g_angrytext_start"
+        app:layout_constraintEnd_toEndOf="@id/g_angrytext_end"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="화나요"/>
+
+    <TextView
+        android:id="@+id/angry_number_1"
+        style="@style/Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/angry_text_1"
+        app:layout_constraintStart_toStartOf="@id/g_angrytext_start"
+        app:layout_constraintEnd_toEndOf="@id/g_angrytext_end"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="2"/>
+
+    <ImageButton
+        android:id="@+id/suprize_emotion_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:src="@drawable/suprize"
+        app:layout_constraintStart_toStartOf="@id/g_suprize_start"
+        app:layout_constraintEnd_toEndOf="@id/g_suprize_end"
+        app:layout_constraintTop_toBottomOf="@id/emotion_share"
+        app:layout_constraintVertical_bias="0.1"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/suprize_text_1"
+        style="@style/Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/suprize_emotion_1"
+        app:layout_constraintStart_toStartOf="@id/g_suprizetext_start"
+        app:layout_constraintEnd_toEndOf="@id/g_suprizetext_end"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="놀람"/>
+
+    <TextView
+        android:id="@+id/suprize_number_1"
+        style="@style/Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/suprize_text_1"
+        app:layout_constraintStart_toStartOf="@id/g_suprizetext_start"
+        app:layout_constraintEnd_toEndOf="@id/g_suprizetext_end"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="2"/>
+
 
 
 
