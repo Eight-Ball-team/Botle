@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/header"
+        android:id="@+id/header"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_edit_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0444" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_edit_end"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9556" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_happytext_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1986" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_happytext_end"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2847" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_sadtext_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3653" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_sadtext_end"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4514" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_happy_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1917" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_happy_end"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2917" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_sad_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3583" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_sad_end"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4583" />
+
+    <ImageButton
+        android:id="@+id/arrow_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_left"
+        android:background="?android:selectableItemBackground"
+        app:layout_constraintStart_toStartOf="@id/g_edit_start"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        android:layout_marginTop="16.5dp"
+        />
+    <TextView
+        style="@style/H2"
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/arrow_left"
+        app:layout_constraintTop_toTopOf="@id/arrow_left"
+        app:layout_constraintBottom_toBottomOf="@id/arrow_left"
+        android:layout_marginStart="16dp"
+        android:text="일기제목제목"/>
+    <TextView
+        android:id="@+id/day"
+        style="@style/Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/g_edit_start"
+        android:text="나는파도를즐겨 | 2024-01-06 23:03"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:layout_marginTop="8dp"
+        />
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#D9D9D9"
+        app:layout_constraintTop_toBottomOf="@id/day"
+        android:layout_marginTop="16dp"
+        />
+    <TextView
+        android:id="@+id/main_text"
+        style="@style/Main"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="어떻게 서비스를 일기쓰기 앱으로 쓸 수 있지
+여러모로 대단한 하루인 것 같다.
+오늘앱잼 사람들이랑 네트워킹 마니 해서 조앗다
+아이즐거워~~
+
+오ㅡㄴㄹ야식으로는 뭘먹ㅇㅡㄹㅇ까
+매우궁금스
+
+진심 근데 오늘 재히씨 너무기야움
+깜찍뽀짝.....완전귀여엽다
+
+아맞아 간식 쪽에 카프리썬도 생김 ㄷㄷ 개쩜
+일러스ㅡㅌ 흑백변환하는 법도 알앗다 뿌듯한하루"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@id/g_edit_start"
+        app:layout_constraintEnd_toEndOf="@id/g_edit_end"
+        android:textColor="#000000"/>
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#D9D9D9"
+        app:layout_constraintTop_toBottomOf="@id/main_text"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:id="@+id/emotion_share"
+        style="@style/Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider2"
+        android:layout_marginTop="16dp"
+        android:text="감정을 눌러 공감해주세요 😎"/>
+    <ImageButton
+        android:id="@+id/happy_emotion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:src="@drawable/happy"
+        app:layout_constraintStart_toStartOf="@id/g_happy_start"
+        app:layout_constraintEnd_toEndOf="@id/g_happy_end"
+        app:layout_constraintTop_toBottomOf="@id/emotion_share"
+        android:layout_marginTop="16dp"/>
+    <TextView
+        android:id="@+id/happy_text"
+        style="@style/Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/happy_emotion"
+        app:layout_constraintStart_toStartOf="@id/g_happytext_start"
+        app:layout_constraintEnd_toEndOf="@id/g_happytext_end"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="좋아요"/>
+    <TextView
+        android:id="@+id/happy_number"
+        style="@style/Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/happy_text"
+        app:layout_constraintStart_toStartOf="@id/g_happytext_start"
+        app:layout_constraintEnd_toEndOf="@id/g_happytext_end"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="10"/>
+    <ImageButton
+        android:id="@+id/sad_emotion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:src="@drawable/sad"
+        app:layout_constraintStart_toStartOf="@id/g_sad_start"
+        app:layout_constraintEnd_toEndOf="@id/g_sad_end"
+        app:layout_constraintTop_toBottomOf="@id/emotion_share"
+        android:layout_marginTop="16dp"/>
+    <TextView
+        android:id="@+id/sad_text"
+        style="@style/Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/happy_emotion"
+        app:layout_constraintStart_toStartOf="@id/g_sadtext_start"
+        app:layout_constraintEnd_toEndOf="@id/g_sadtext_end"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="슬퍼요"/>
+    <TextView
+        android:id="@+id/sad_number"
+        style="@style/Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/happy_text"
+        app:layout_constraintStart_toStartOf="@id/g_sadtext_start"
+        app:layout_constraintEnd_toEndOf="@id/g_sadtext_end"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="2"/>
+    
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
