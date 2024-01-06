@@ -23,6 +23,7 @@
         android:id="@+id/header"/>
 
     <TextView
+        style="@style/Main"
         android:id="@+id/title_title"
         android:layout_width="28dp"
         android:layout_height="20dp"
@@ -49,6 +50,7 @@
         app:layout_constraintTop_toBottomOf="@id/title_title" />
 
     <TextView
+        style="@style/Main"
         android:id="@+id/context_title"
         android:layout_width="28dp"
         android:layout_height="20dp"
@@ -73,6 +75,92 @@
         app:layout_constraintEnd_toEndOf="@id/g_edit_end"
         app:layout_constraintStart_toStartOf="@id/g_edit_start"
         app:layout_constraintTop_toBottomOf="@id/context_title" />
+    <TextView
+        style="@style/Main"
+        android:id="@+id/state_text"
+        android:layout_width="28dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="8dp"
+        android:text="상태"
+        app:layout_constraintStart_toStartOf="@id/g_edit_start"
+        app:layout_constraintTop_toBottomOf="@id/edit_context"
+        app:layout_goneMarginTop="24dp"
+        />
+    <RadioButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/g_edit_start"
+        app:layout_constraintTop_toBottomOf="@id/state_text"
+        android:layout_marginTop="8dp"
+        android:text="공개"/>
+    <RadioButton
+        android:id="@+id/noshow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/g_edit_start"
+        app:layout_constraintTop_toBottomOf="@id/state_text"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="73dp"
+        android:text="비공개"/>
+    <TextView
+        style="@style/Main"
+        android:id="@+id/category"
+        android:layout_width="55dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="8dp"
+        android:text="카테고리"
+        app:layout_constraintStart_toStartOf="@id/g_edit_start"
+        app:layout_constraintTop_toBottomOf="@id/noshow"
+        app:layout_goneMarginTop="24dp"
+        />
+    <RadioButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/g_edit_start"
+        app:layout_constraintTop_toBottomOf="@id/category"
+        android:layout_marginTop="8dp"
+        android:text="기쁨"/>
+    <RadioButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/g_edit_start"
+        app:layout_constraintTop_toBottomOf="@id/category"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="73dp"
+        android:text="슬픔"/>
+    <RadioButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/g_edit_start"
+        app:layout_constraintTop_toBottomOf="@id/category"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="146dp"
+        android:text="분노"/>
+    <RadioButton
+    android:id="@+id/surprised"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/g_edit_start"
+        app:layout_constraintTop_toBottomOf="@id/category"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="219dp"
+        android:text="놀람"/>
+    <Button
+        android:id="@+id/login_button"
+        style="@style/Main"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_button_background"
+        android:text="로그인"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/g_edit_start"
+        app:layout_constraintEnd_toEndOf="@id/g_edit_end"
+        app:layout_constraintTop_toBottomOf="@+id/surprised"
+        android:layout_marginTop="44dp"/>
+    />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
