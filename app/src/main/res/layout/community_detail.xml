@@ -18,6 +18,54 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.9556" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_happytext_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1986" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_happytext_end"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2847" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_sadtext_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3653" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_sadtext_end"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4514" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_happy_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1917" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_happy_end"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2917" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_sad_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3583" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_sad_end"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4583" />
 
     <ImageButton
         android:id="@+id/arrow_left"
@@ -88,5 +136,82 @@
         app:layout_constraintTop_toBottomOf="@id/main_text"
         android:layout_marginTop="20dp"
         />
+    <TextView
+        android:id="@+id/emotion_share"
+        style="@style/Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider2"
+        android:layout_marginTop="16dp"
+        android:text="감정을 눌러 공감해주세요 😎"/>
+    <ImageButton
+        android:id="@+id/happy_emotion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:src="@drawable/happy"
+        app:layout_constraintStart_toStartOf="@id/g_happy_start"
+        app:layout_constraintEnd_toEndOf="@id/g_happy_end"
+        app:layout_constraintTop_toBottomOf="@id/emotion_share"
+        android:layout_marginTop="16dp"/>
+    <TextView
+        android:id="@+id/happy_text"
+        style="@style/Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/happy_emotion"
+        app:layout_constraintStart_toStartOf="@id/g_happytext_start"
+        app:layout_constraintEnd_toEndOf="@id/g_happytext_end"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="좋아요"/>
+    <TextView
+        android:id="@+id/happy_number"
+        style="@style/Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/happy_text"
+        app:layout_constraintStart_toStartOf="@id/g_happytext_start"
+        app:layout_constraintEnd_toEndOf="@id/g_happytext_end"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="10"/>
+    <ImageButton
+        android:id="@+id/sad_emotion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:src="@drawable/sad"
+        app:layout_constraintStart_toStartOf="@id/g_sad_start"
+        app:layout_constraintEnd_toEndOf="@id/g_sad_end"
+        app:layout_constraintTop_toBottomOf="@id/emotion_share"
+        android:layout_marginTop="16dp"/>
+    <TextView
+        android:id="@+id/sad_text"
+        style="@style/Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/happy_emotion"
+        app:layout_constraintStart_toStartOf="@id/g_sadtext_start"
+        app:layout_constraintEnd_toEndOf="@id/g_sadtext_end"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="슬퍼요"/>
+    <TextView
+        android:id="@+id/sad_number"
+        style="@style/Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/happy_text"
+        app:layout_constraintStart_toStartOf="@id/g_sadtext_start"
+        app:layout_constraintEnd_toEndOf="@id/g_sadtext_end"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="2"/>
+    
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
