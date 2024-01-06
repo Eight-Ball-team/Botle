@@ -87,14 +87,17 @@
         app:layout_constraintTop_toBottomOf="@id/edit_context"
         app:layout_goneMarginTop="24dp"
         />
-    <RadioButton
+    <ToggleButton
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/g_edit_start"
         app:layout_constraintTop_toBottomOf="@id/state_text"
         android:layout_marginTop="8dp"
-        android:text="공개"/>
-    <RadioButton
+        android:checked="true"
+        android:background="@drawable/toggle"
+        android:textOn="공개"
+        android:textOff="공개"/>
+    <ToggleButton
         android:id="@+id/noshow"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -102,7 +105,10 @@
         app:layout_constraintTop_toBottomOf="@id/state_text"
         android:layout_marginTop="8dp"
         android:layout_marginLeft="73dp"
-        android:text="비공개"/>
+        android:checked="false"
+        android:background="@drawable/toggle"
+        android:textOn="비공개"
+        android:textOff="비공개"/>
     <TextView
         style="@style/Main"
         android:id="@+id/category"
@@ -115,30 +121,40 @@
         app:layout_constraintTop_toBottomOf="@id/noshow"
         app:layout_goneMarginTop="24dp"
         />
-    <RadioButton
+    <ToggleButton
         android:layout_width="0dp"
+        android:background="@drawable/toggle"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/g_edit_start"
         app:layout_constraintTop_toBottomOf="@id/category"
         android:layout_marginTop="8dp"
-        android:text="기쁨"/>
-    <RadioButton
+        android:checked="true"
+        android:textOn="기쁨"
+        android:textOff="기쁨"/>
+    <ToggleButton
+        android:background="@drawable/toggle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/g_edit_start"
         app:layout_constraintTop_toBottomOf="@id/category"
         android:layout_marginTop="8dp"
         android:layout_marginLeft="73dp"
-        android:text="슬픔"/>
-    <RadioButton
+        android:checked="false"
+        android:textOn="슬픔"
+        android:textOff="슬픔"/>
+    <ToggleButton
+        android:background="@drawable/toggle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/g_edit_start"
         app:layout_constraintTop_toBottomOf="@id/category"
         android:layout_marginTop="8dp"
         android:layout_marginLeft="146dp"
-        android:text="분노"/>
-    <RadioButton
+        android:textOn="분노"
+        android:checked="false"
+        android:textOff="분노"/>
+    <ToggleButton
+        android:background="@drawable/toggle"
     android:id="@+id/surprised"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -146,7 +162,9 @@
         app:layout_constraintTop_toBottomOf="@id/category"
         android:layout_marginTop="8dp"
         android:layout_marginLeft="219dp"
-        android:text="놀람"/>
+        android:checked="false"
+        android:textOn="놀람"
+        android:textOff="놀람"/>
     <Button
         android:id="@+id/login_button"
         style="@style/Main"
