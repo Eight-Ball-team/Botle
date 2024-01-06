@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="diray_icon"
+        android:title="일기"
+        android:enabled="true"
+        android:icon="@drawable/home_icon"/>
+
+
+    <item android:id="@+id/profile_icon"
+        android:icon="@drawable/profile_icon"
+        android:enabled="true"
+        android:title="프로필" />
+</menu>
