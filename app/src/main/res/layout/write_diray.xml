@@ -1,7 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<include layout="@layout/header"/>
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_edit_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0444" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_edit_end"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9556" />
+
+    <include layout="@layout/header"
+        android:id="@+id/header"/>
+
+    <TextView
+        android:id="@+id/title_title"
+        android:layout_width="28dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="8dp"
+        android:text="제목"
+        app:layout_constraintStart_toStartOf="@id/g_edit_start"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        />
+
+    <EditText
+        android:id="@+id/edit_title"
+        style="@style/Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/edit_background"
+        android:hint="제목을 적어주세요"
+        android:textColor="#000"
+        android:textColorHint="#B3B3B3"
+        app:layout_constraintEnd_toEndOf="@id/g_edit_end"
+        app:layout_constraintStart_toStartOf="@id/g_edit_start"
+        app:layout_constraintTop_toBottomOf="@id/title_title" />
+
+    <TextView
+        android:id="@+id/context_title"
+        android:layout_width="28dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="8dp"
+        android:text="내용"
+        app:layout_constraintStart_toStartOf="@id/g_edit_start"
+        app:layout_constraintTop_toBottomOf="@id/edit_title"
+        />
+
+    <EditText
+        android:id="@+id/edit_context"
+        style="@style/Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/edit_background"
+        android:hint="내용을 작성해주세요. (최대 1,000자)"
+        android:textColor="#000"
+        android:textColorHint="#B3B3B3"
+        app:layout_constraintEnd_toEndOf="@id/g_edit_end"
+        app:layout_constraintStart_toStartOf="@id/g_edit_start"
+        app:layout_constraintTop_toBottomOf="@id/context_title" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
